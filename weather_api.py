@@ -41,7 +41,7 @@ def print_results(temp: float, humidity: float, rain: float) -> None:
     print(f"Temperature : {temp}, Relative Humitidy : {humidity}, Rain : {rain}%")
 
 
-@flow
+@flow(log_prints=True)
 def test_flow(lat: float, lon: float):
     temp = get_temp(lat, lon)
     humidity = get_humidity(lat, lon)
